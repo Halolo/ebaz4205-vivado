@@ -1,0 +1,60 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.626673",
+   "Default View_TopLeft":"-179,-750",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -lvl 3 -x 1530 -y 240 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 3 -x 1530 -y 260 -defaultsOSRD
+preplace port enet0_mdio -pg 1 -lvl 3 -x 1530 -y 200 -defaultsOSRD
+preplace port emio -pg 1 -lvl 3 -x 1530 -y 220 -defaultsOSRD
+preplace port enet0_mii_rx_clk -pg 1 -lvl 3 -x 1530 -y 100 -defaultsOSRD -right
+preplace port enet0_mii_rx_dv -pg 1 -lvl 3 -x 1530 -y 120 -defaultsOSRD -right
+preplace port enet0_mii_tx_clk -pg 1 -lvl 3 -x 1530 -y 160 -defaultsOSRD -right
+preplace port enet0_phy_clk -pg 1 -lvl 3 -x 1530 -y 710 -defaultsOSRD
+preplace port apa106 -pg 1 -lvl 3 -x 1530 -y -470 -defaultsOSRD
+preplace port ws2812b -pg 1 -lvl 3 -x 1530 -y -660 -defaultsOSRD
+preplace portBus enet0_mii_txd -pg 1 -lvl 3 -x 1530 -y 40 -defaultsOSRD
+preplace portBus enet0_mii_tx_en -pg 1 -lvl 3 -x 1530 -y 0 -defaultsOSRD
+preplace portBus enet0_mii_rxd -pg 1 -lvl 3 -x 1530 -y 470 -defaultsOSRD -right
+preplace inst processing_system7_0 -pg 1 -lvl 1 -x 430 -y 150 -defaultsOSRD
+preplace inst xlslice_0 -pg 1 -lvl 2 -x 990 -y 40 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 2 -x 990 -y 460 -defaultsOSRD -orient R180
+preplace inst xlconstant_0 -pg 1 -lvl 2 -x 990 -y 350 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 2 -x 990 -y 610 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -x 990 -y -190 -defaultsOSRD
+preplace inst AXIWS2812Strip_0 -pg 1 -lvl 2 -x 990 -y -470 -defaultsOSRD
+preplace inst AXIWS2812Strip_1 -pg 1 -lvl 2 -x 990 -y -660 -defaultsOSRD
+preplace netloc processing_system7_0_ENET0_GMII_TXD 1 1 1 720J 40n
+preplace netloc xlslice_0_Dout 1 2 1 N 40
+preplace netloc processing_system7_0_ENET0_GMII_TX_EN 1 1 2 770 110 1180J
+preplace netloc enet0_mii_rx_clk_1 1 1 2 760 100 NJ
+preplace netloc enet0_mii_rx_dv_1 1 1 2 750 120 NJ
+preplace netloc enet0_mii_tx_clk_1 1 1 2 740 160 NJ
+preplace netloc xlconcat_0_dout 1 1 1 680 130n
+preplace netloc xlconstant_0_dout 1 2 1 1160 350n
+preplace netloc enet0_mii_rxd_1 1 2 1 N 470
+preplace netloc processing_system7_0_FCLK_CLK1 1 1 2 N 270 1180J
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 2 -10 350 730
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 1 660 290n
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 1 2 760 -20 1170
+preplace netloc AXIWS2812Strip_0_led_out 1 2 1 N -470
+preplace netloc AXIWS2812Strip_1_led_out 1 2 1 N -660
+preplace netloc processing_system7_0_DDR 1 1 2 670J 240 NJ
+preplace netloc processing_system7_0_FIXED_IO 1 1 2 660J 260 NJ
+preplace netloc processing_system7_0_MDIO_ETHERNET_0 1 1 2 700 200 NJ
+preplace netloc processing_system7_0_GPIO_0 1 1 2 690 220 NJ
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 710J -270n
+preplace netloc ps7_0_axi_periph_M00_AXI 1 1 2 770 -550 1170
+preplace netloc ps7_0_axi_periph_M01_AXI 1 1 2 730 -740 1180
+levelinfo -pg 1 -30 430 990 1530
+pagesize -pg 1 -db -bbox -sgen -30 -780 1720 780
+"
+}
+{
+   "da_axi4_cnt":"4",
+   "da_board_cnt":"1",
+   "da_clkrst_cnt":"1",
+   "da_ps7_cnt":"1"
+}

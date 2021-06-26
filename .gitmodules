@@ -1,0 +1,3 @@
+[submodule "Zynq_WS2812_AXILite"]
+	path = Zynq_WS2812_AXILite
+	url = git@github.com:Halolo/Zynq_WS2812_AXILite.git
