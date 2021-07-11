@@ -2,6 +2,7 @@
 # website: https://www.xilinx.com/support/download.html
 
 # [home]
+*.xsa
 *.jou
 *.log
 *.debug
@@ -60,6 +61,7 @@
 !*.runs/synth*/*utilization*.rpt
 
 ### project impl
+*/*.runs/impl*/*.bit
 */*.runs/impl*/*.xml
 */*.runs/impl*/*.html
 */*.runs/impl*/*.txt
@@ -68,6 +70,7 @@
 */*.runs/impl*/*.bat
 !*/*.runs/impl*/*utilization*.rpt
 
+*.runs/impl*/*.bit
 *.runs/impl*/*.xml
 *.runs/impl*/*.html
 *.runs/impl*/*.txt
