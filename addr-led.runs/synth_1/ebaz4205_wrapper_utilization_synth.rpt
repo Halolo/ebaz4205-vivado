@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-| Date         : Sat Jun 26 17:44:19 2021
+| Date         : Sat Jul 10 21:38:32 2021
 | Host         : laurent-desktop running 64-bit Arch Linux
 | Command      : report_utilization -file ebaz4205_wrapper_utilization_synth.rpt -pb ebaz4205_wrapper_utilization_synth.pb
 | Design       : ebaz4205_wrapper
@@ -90,7 +90,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |   16 |     0 |       100 | 16.00 |
+| Bonded IOB                  |   19 |     0 |       100 | 19.00 |
 | Bonded IPADs                |    0 |     0 |         2 |  0.00 |
 | Bonded IOPADs               |    0 |     0 |       130 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         2 |  0.00 |
@@ -147,7 +147,7 @@ Table of Contents
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | IBUF     |   10 |                  IO |
-| OBUF     |    6 |                  IO |
+| OBUF     |    9 |                  IO |
 | OBUFT    |    3 |                  IO |
 +----------+------+---------------------+
 

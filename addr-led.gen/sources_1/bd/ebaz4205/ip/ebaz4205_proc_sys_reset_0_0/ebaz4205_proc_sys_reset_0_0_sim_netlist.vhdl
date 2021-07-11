@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
 -- Date        : Sat Jun 26 14:32:31 2021
 -- Host        : laurent-desktop running 64-bit Arch Linux
--- Command     : write_vhdl -force -mode funcsim
---               /home/laurent/repos/ebaz4205-vivado/addr-led.gen/sources_1/bd/ebaz4205/ip/ebaz4205_proc_sys_reset_0_0/ebaz4205_proc_sys_reset_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top ebaz4205_proc_sys_reset_0_0 -prefix
+--               ebaz4205_proc_sys_reset_0_0_ ebaz4205_proc_sys_reset_0_0_sim_netlist.vhdl
 -- Design      : ebaz4205_proc_sys_reset_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -25,8 +25,6 @@ entity ebaz4205_proc_sys_reset_0_0_cdc_sync is
     aux_reset_in : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ebaz4205_proc_sys_reset_0_0_cdc_sync : entity is "cdc_sync";
 end ebaz4205_proc_sys_reset_0_0_cdc_sync;
 
 architecture STRUCTURE of ebaz4205_proc_sys_reset_0_0_cdc_sync is
@@ -237,8 +235,6 @@ entity ebaz4205_proc_sys_reset_0_0_upcnt_n is
     seq_cnt_en : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ebaz4205_proc_sys_reset_0_0_upcnt_n : entity is "upcnt_n";
 end ebaz4205_proc_sys_reset_0_0_upcnt_n;
 
 architecture STRUCTURE of ebaz4205_proc_sys_reset_0_0_upcnt_n is
@@ -403,8 +399,6 @@ entity ebaz4205_proc_sys_reset_0_0_lpf is
     ext_reset_in : in STD_LOGIC;
     aux_reset_in : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ebaz4205_proc_sys_reset_0_0_lpf : entity is "lpf";
 end ebaz4205_proc_sys_reset_0_0_lpf;
 
 architecture STRUCTURE of ebaz4205_proc_sys_reset_0_0_lpf is
@@ -591,8 +585,6 @@ entity ebaz4205_proc_sys_reset_0_0_sequence_psr is
     lpf_int : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ebaz4205_proc_sys_reset_0_0_sequence_psr : entity is "sequence_psr";
 end ebaz4205_proc_sys_reset_0_0_sequence_psr;
 
 architecture STRUCTURE of ebaz4205_proc_sys_reset_0_0_sequence_psr is
@@ -931,8 +923,6 @@ entity ebaz4205_proc_sys_reset_0_0_proc_sys_reset is
   attribute C_NUM_PERP_ARESETN of ebaz4205_proc_sys_reset_0_0_proc_sys_reset : entity is 1;
   attribute C_NUM_PERP_RST : integer;
   attribute C_NUM_PERP_RST of ebaz4205_proc_sys_reset_0_0_proc_sys_reset : entity is 1;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ebaz4205_proc_sys_reset_0_0_proc_sys_reset : entity is "proc_sys_reset";
 end ebaz4205_proc_sys_reset_0_0_proc_sys_reset;
 
 architecture STRUCTURE of ebaz4205_proc_sys_reset_0_0_proc_sys_reset is

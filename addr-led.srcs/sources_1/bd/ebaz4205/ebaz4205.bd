@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x24AB93A468D8EC90",
+      "boundary_crc": "0x267594839306E198",
       "device": "xc7z010clg400-1",
       "gen_directory": "../../../../addr-led.gen/sources_1/bd/ebaz4205",
       "name": "ebaz4205",
@@ -12,7 +12,6 @@
     },
     "design_tree": {
       "processing_system7_0": "",
-      "xlslice_0": "",
       "xlconcat_0": "",
       "xlconstant_0": "",
       "proc_sys_reset_0": "",
@@ -25,7 +24,8 @@
         "m01_couplers": {}
       },
       "AXIWS2812Strip_0": "",
-      "AXIWS2812Strip_1": ""
+      "AXIWS2812Strip_1": "",
+      "xlslice_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -108,11 +108,6 @@
       }
     },
     "ports": {
-      "enet0_mii_txd": {
-        "direction": "O",
-        "left": "0",
-        "right": "0"
-      },
       "enet0_mii_tx_en": {
         "direction": "O",
         "left": "0",
@@ -207,6 +202,11 @@
       },
       "ws2812b": {
         "direction": "O"
+      },
+      "enet0_mii_txd": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
       }
     },
     "components": {
@@ -1049,20 +1049,6 @@
           }
         }
       },
-      "xlslice_0": {
-        "vlnv": "xilinx.com:ip:xlslice:1.0",
-        "xci_name": "ebaz4205_xlslice_0_0",
-        "xci_path": "ip/ebaz4205_xlslice_0_0/ebaz4205_xlslice_0_0.xci",
-        "inst_hier_path": "xlslice_0",
-        "parameters": {
-          "DIN_WIDTH": {
-            "value": "8"
-          },
-          "DOUT_WIDTH": {
-            "value": "4"
-          }
-        }
-      },
       "xlconcat_0": {
         "vlnv": "xilinx.com:ip:xlconcat:2.1",
         "xci_name": "ebaz4205_xlconcat_0_0",
@@ -1419,22 +1405,16 @@
           }
         },
         "interface_nets": {
-          "s00_couplers_to_xbar": {
-            "interface_ports": [
-              "s00_couplers/M_AXI",
-              "xbar/S00_AXI"
-            ]
-          },
           "xbar_to_m01_couplers": {
             "interface_ports": [
               "xbar/M01_AXI",
               "m01_couplers/S_AXI"
             ]
           },
-          "m00_couplers_to_ps7_0_axi_periph": {
+          "ps7_0_axi_periph_to_s00_couplers": {
             "interface_ports": [
-              "M00_AXI",
-              "m00_couplers/M_AXI"
+              "S00_AXI",
+              "s00_couplers/S_AXI"
             ]
           },
           "xbar_to_m00_couplers": {
@@ -1449,10 +1429,16 @@
               "m01_couplers/M_AXI"
             ]
           },
-          "ps7_0_axi_periph_to_s00_couplers": {
+          "m00_couplers_to_ps7_0_axi_periph": {
             "interface_ports": [
-              "S00_AXI",
-              "s00_couplers/S_AXI"
+              "M00_AXI",
+              "m00_couplers/M_AXI"
+            ]
+          },
+          "s00_couplers_to_xbar": {
+            "interface_ports": [
+              "s00_couplers/M_AXI",
+              "xbar/S00_AXI"
             ]
           }
         },
@@ -1511,6 +1497,26 @@
         "xci_name": "ebaz4205_AXIWS2812Strip_1_0",
         "xci_path": "ip/ebaz4205_AXIWS2812Strip_1_0/ebaz4205_AXIWS2812Strip_1_0.xci",
         "inst_hier_path": "AXIWS2812Strip_1"
+      },
+      "xlslice_0": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "ebaz4205_xlslice_0_0",
+        "xci_path": "ip/ebaz4205_xlslice_0_0/ebaz4205_xlslice_0_0.xci",
+        "inst_hier_path": "xlslice_0",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "3"
+          },
+          "DIN_TO": {
+            "value": "0"
+          },
+          "DIN_WIDTH": {
+            "value": "8"
+          },
+          "DOUT_WIDTH": {
+            "value": "4"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -1562,12 +1568,6 @@
         "ports": [
           "processing_system7_0/ENET0_GMII_TXD",
           "xlslice_0/Din"
-        ]
-      },
-      "xlslice_0_Dout": {
-        "ports": [
-          "xlslice_0/Dout",
-          "enet0_mii_txd"
         ]
       },
       "processing_system7_0_ENET0_GMII_TX_EN": {
@@ -1659,6 +1659,12 @@
           "AXIWS2812Strip_1/led_out",
           "ws2812b"
         ]
+      },
+      "xlslice_0_Dout": {
+        "ports": [
+          "xlslice_0/Dout",
+          "enet0_mii_txd"
+        ]
       }
     },
     "addressing": {
@@ -1668,7 +1674,7 @@
             "segments": {
               "SEG_AXIWS2812Strip_0_S00_AXI_reg": {
                 "address_block": "/AXIWS2812Strip_0/S00_AXI/S00_AXI_reg",
-                "offset": "0x43C00000",
+                "offset": "0x43C20000",
                 "range": "64K"
               },
               "SEG_AXIWS2812Strip_1_S00_AXI_reg": {

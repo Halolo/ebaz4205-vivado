@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
--- Date        : Sat Jun 26 17:43:35 2021
+-- Date        : Sat Jun 26 17:43:34 2021
 -- Host        : laurent-desktop running 64-bit Arch Linux
--- Command     : write_vhdl -force -mode funcsim
---               /home/laurent/repos/ebaz4205-vivado/addr-led.gen/sources_1/bd/ebaz4205/ip/ebaz4205_AXIWS2812Strip_1_0/ebaz4205_AXIWS2812Strip_1_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top ebaz4205_AXIWS2812Strip_1_0 -prefix
+--               ebaz4205_AXIWS2812Strip_1_0_ ebaz4205_AXIWS2812Strip_1_0_sim_netlist.vhdl
 -- Design      : ebaz4205_AXIWS2812Strip_1_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -26,8 +26,6 @@ entity ebaz4205_AXIWS2812Strip_1_0_ws2812_driver is
     \axi_rdata_reg[0]\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     axi_araddr : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ebaz4205_AXIWS2812Strip_1_0_ws2812_driver : entity is "ws2812_driver";
 end ebaz4205_AXIWS2812Strip_1_0_ws2812_driver;
 
 architecture STRUCTURE of ebaz4205_AXIWS2812Strip_1_0_ws2812_driver is
@@ -3355,8 +3353,6 @@ entity ebaz4205_AXIWS2812Strip_1_0_AXIWS2812Strip_v1_0_S00_AXI is
     s00_axi_bready : in STD_LOGIC;
     s00_axi_rready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ebaz4205_AXIWS2812Strip_1_0_AXIWS2812Strip_v1_0_S00_AXI : entity is "AXIWS2812Strip_v1_0_S00_AXI";
 end ebaz4205_AXIWS2812Strip_1_0_AXIWS2812Strip_v1_0_S00_AXI;
 
 architecture STRUCTURE of ebaz4205_AXIWS2812Strip_1_0_AXIWS2812Strip_v1_0_S00_AXI is
@@ -5264,8 +5260,6 @@ entity ebaz4205_AXIWS2812Strip_1_0_AXIWS2812Strip_v1_0 is
     s00_axi_bready : in STD_LOGIC;
     s00_axi_rready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ebaz4205_AXIWS2812Strip_1_0_AXIWS2812Strip_v1_0 : entity is "AXIWS2812Strip_v1_0";
 end ebaz4205_AXIWS2812Strip_1_0_AXIWS2812Strip_v1_0;
 
 architecture STRUCTURE of ebaz4205_AXIWS2812Strip_1_0_AXIWS2812Strip_v1_0 is
